@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+
+    {% include head.html %}
+
+	  <body class="is-loading">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            {% include intro.html %}
+            {% include header.html %}
+            {% include menu.html %}
+					
+			<article class="post featured">
+				<h2>Venez découvrir la Fromagerie des Reussilles.</h2>
+				<hr>
+				<div class="row">
+					<div class="5u 12u$(small)">
+						<p>
+							<b><u>Horraires d'ouverture</u>:</b> <br>
+							<b>mardi à samedi:</b> 7h - 12h, 16h - 19h <br>
+							<b>dimanche:</b> 16h - 19h <br>
+							<b>lundi:</b> fermé <br>
+						</p>	
+					</div>
+					<div class="7u$ 12u$(small)">
+						<div class="map-responsive">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.6521405327976!2d7.081748915617281!3d47.22338837916107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e020c2504033f%3A0x9a164567dbe86192!2sFromagerie+des+Reussilles+SA!5e0!3m2!1sfr!2sch!4v1507577708061" width="650" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+				<br>
+				<a href="{{ site.baseurl }}/Promotion.html" class="button special">Promotion du moment</a>
+			</article>
+
+            {% if site.posts != null %}
+
+				    <!-- Posts -->
+				    <section class="posts">
+	              {% for post in site.posts %}
+						    <article>
+								    <header>
+										    <span class="date">{{ post.date | date: "%-d %B, %Y" }}</span>
+										<h2><a href="{{ post.url  | relative_url }}">{{ post.title }}</a></h2>
+								</header>
+								<a href="{{ post.url  | relative_url }}" class="image fit"><img src="{{ post.image }}" alt="" /></a>
+								<p>{{ post.excerpt }}</p>
+								<ul class="actions">
+										<li><a href="{{ post.url  | relative_url }}" class="button">Plus d'info</a></li>
+								</ul>
+						</article>
+	          {% endfor %}
+				</section>
+
+
+        <!-- Footer -->
+        <footer>
+		        <!-- <div class="pagination"> -->
+				        <!--<a href="#" class="previous">Prev</a>-->
+				        <!-- <a href="#" class="page active">1</a>
+				        <a href="#" class="page">2</a>
+				        <a href="#" class="page">3</a>
+				        <span class="extra">&hellip;</span>
+				        <a href="#" class="page">8</a>
+				        <a href="#" class="page">9</a>
+				        <a href="#" class="page">10</a>
+				        <a href="#" class="next">Next</a>
+		        </div> -->
+
+            <!-- This loops through the paginated posts -->
+            {% for post in paginator.posts %}
+                 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                 <p class="author">
+                 <span class="date">{{ post.date }}</span>
+                 </p>
+                 <div class="content">
+                 {{ post.content }}
+                 </div>
+                 {% endfor %}
+
+            <!-- Pagination links -->
+            <!-- <div class="pagination">
+                 {% if paginator.previous_page %}
+                 <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+                 {% else %}
+                 <span class="previous">Previous</span>
+                 {% endif %}
+                 <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+                 {% if paginator.next_page %}
+                 <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+                 {% else %}
+                 <span class="next ">Next</span>
+                 {% endif %}
+                 </div> -->
+              
+        </footer>
+
+{% endif %}
+
+        {% include footer.html %}
+
+    </body>
+
+</html>

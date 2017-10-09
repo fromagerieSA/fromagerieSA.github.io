@@ -1,0 +1,35 @@
+# site settings
+title: Fromagerie des Reussilles SA
+subtitle: 
+email: info@fromageriesa.ch
+description: ""
+# baseurl: "/fromagerie" # site's subpath, e.g. /blog
+baseurl: "" # site's subpath, e.g. /blog
+# url: "https://roscas.github.io/fromagerie" # site's base hostname & protocol 
+url: "" # site's base hostname & protocol 
+author:
+street_address: Le Saucy 24a
+city: Les Reussilles
+state: Canton
+zip_code: 2722
+country: Suisse
+phone: 032 487 46 14
+fax: 032 487 31 93
+
+# social settings
+500px_url:
+facebook_url:
+github_url:
+gitlab_url: 
+googleplus_url:
+instagram_url:
+linkedin_url:
+pinterest_url:
+slack_url:
+twitter_url:
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
