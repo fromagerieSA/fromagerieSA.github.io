@@ -3,9 +3,7 @@ title: Fromagerie des Reussilles SA
 subtitle: 
 email: info@fromageriesa.ch
 description: ""
-# baseurl: "/fromagerie" # site's subpath, e.g. /blog
 baseurl: "" # site's subpath, e.g. /blog
-# url: "https://roscas.github.io/fromagerie" # site's base hostname & protocol 
 url: "" # site's base hostname & protocol 
 author:
 street_address: Le Saucy 24a
