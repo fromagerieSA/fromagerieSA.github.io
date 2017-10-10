@@ -2457,6 +2457,13 @@
 			width: 100%;
 		}
 
+		.image.fit.logo {
+			/* display: block; */
+			display: inline-block;
+			margin: 2.5rem 0;
+			width: 60%;
+		}
+
 			.image.fit:first-child {
 				margin-top: 0;
 			}
